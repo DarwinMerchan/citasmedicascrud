@@ -10,7 +10,7 @@ namespace citasmedicascrud
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage (new MainPage());//get
+            MainPage = new NavigationPage (new MainPage());
         }
 
         protected override void OnStart()

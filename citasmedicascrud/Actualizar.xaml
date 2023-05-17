@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="citasmedicascrud.Registro"
+             x:Class="citasmedicascrud.Actualizar"
              NavigationPage.HasNavigationBar="False">
-
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Registro de citas" HorizontalTextAlignment="Center" FontSize="20"/>
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese codigo"/>
             <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre"/>
             <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"/>
             <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" Keyboard="Numeric"/>
@@ -14,12 +14,12 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnInsertar" Text="INSERTAR" Clicked="btnInsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="BTNACTUALIZAR" Text="ACTUALIZAR" Clicked="BTNACTUALIZAR_Clicked" Grid.Row="0" Grid.Column="0"/>
                 <Button x:Name="btnRegresar" Text="REGRESAR" Clicked="btnRegresar_Clicked" Grid.Row="0" Grid.Column="1"/>
             </Grid>
         </StackLayout>

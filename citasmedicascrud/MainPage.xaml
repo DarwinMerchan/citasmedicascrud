@@ -11,10 +11,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
-                        <Label x:Name="lblNombre" Text="{Binding nombre}"/>
-                        <Label x:Name="lblApellido" Text="{Binding apellido}"/>
-                        </StackLayout>
+                        <Grid>
+                            <Label  Grid.Column="0" Text="{Binding nombre}"/>
+                            <Label  Grid.Column="1" Text="{Binding apellido}"/>
+                            <Button CommandParameter="{Binding codigo}" Grid.Column="2" Text="Actualizar" Clicked="Button_Clicked" ></Button>
+                            <Button CommandParameter="{Binding codigo}" Grid.Column="3" Text="Eliminar" Clicked="Button_Clicked_1" ></Button>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
