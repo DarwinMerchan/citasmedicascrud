@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout BackgroundColor="FloralWhite">
-                <Label Text="BIENVENIDOS AL REGISTRO DE CITAS MEDICAS SEMANA7" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"/>
+                <Label Text="BIENVENIDOS DEBER SEMANA7" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"/>
                 <Image Source="imagen2.png" WidthRequest="100" HeightRequest="100"/>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -22,8 +22,6 @@
                     <Label Text="CONTRASENA" FontSize="20" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
                     <Entry x:Name="txtContrasena" Placeholder="CONTRASEÑA" Grid.Row="1" Grid.Column="1" IsPassword="True"/>
                     <Button x:Name="btnIngresar" Text="INGRESAR" Clicked="btnIngresar_Clicked" Grid.Row="2" Grid.Column="1"/>
-                    <Button x:Name="btnRegistro" Text="OLVIDO SU CONTRASEÑA" Clicked="btnRegistro_Clicked" Grid.Row="2" Grid.Column="0"/>
-                    <Button x:Name="btnOcontrasena" Text="REGISTRESE AQUÍ" Clicked="btnOcontrasena_Clicked" Grid.Row="3" Grid.Column="1"/>
                 </Grid>
             </StackLayout>
         </ScrollView>
