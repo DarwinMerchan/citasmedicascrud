@@ -11,12 +11,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using citasmedicascrud.Modelo;
+using System.IO;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.CompilerServices;
 
 namespace citasmedicascrud
 {
     public partial class MainPage : ContentPage
     {
-        private const string Url = "http://192.168.3.8/citas/post.php";
+        private string Url = Constantes.Constantes.Host + "/citas/obtener.php";
         private readonly HttpClient cliente = new HttpClient();
         private ObservableCollection<Paciente> post;
                     
@@ -49,7 +53,9 @@ namespace citasmedicascrud
         private void Button_Clicked_1(object sender, EventArgs e)
         {
             var codigo = (Button)sender;
-            DisplayAlert("test",codigo.CommandParameter.ToString(),"Cerrar");
+            Navigation.PushAsync(new Eliminar(codigo.CommandParameter.ToString()));
+
+           // DisplayAlert("ALERTA", codigo.CommandParameter.ToString(), "cerrar");
         }
     }
 }

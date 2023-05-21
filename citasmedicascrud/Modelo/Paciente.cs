@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace citasmedicascrud.Modelo
+﻿namespace citasmedicascrud.Modelo
 {
     public class Paciente
     {

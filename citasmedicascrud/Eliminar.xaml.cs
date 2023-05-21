@@ -10,23 +10,25 @@ using Xamarin.Essentials;
 using System.IO;
 using citasmedicascrud.Modelo;
 using Newtonsoft.Json;
+using citasmedicascrud.Constantes;
 
 namespace citasmedicascrud
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Actualizar : ContentPage
+    public partial class Eliminar : ContentPage
     {
-        public Actualizar(string Codigo)
+        public Eliminar(string Codigo)
         {
             InitializeComponent();
             CargarDatos(Codigo);
         }
 
+
         private void CargarDatos(string Codigo)
         {
             try
             {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Constantes.Constantes.Host+"/citas/obtener.php?codigo="+Codigo);
+                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Constantes.Constantes.Host+"/citas/obtener.php?codigo=" + Codigo);
                 Request.Method = "GET";
 
                 try
@@ -56,18 +58,18 @@ namespace citasmedicascrud
             }
         }
 
-        private void BTNACTUALIZAR_Clicked(object sender, EventArgs e)
+        private void btnEliminar_Clicked(object sender, EventArgs e)
         {
             try
             {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Constantes.Constantes.Host + "/citas/actualizar.php");
-                Request.Method = "PUT";
+                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Constantes.Constantes.Host + "/citas/eliminar.php");
+                Request.Method = "DELETE";
                 Request.ContentType = Constantes.Constantes.ContentType;
 
                 StreamWriter sw = new StreamWriter(Request.GetRequestStream());
                 Paciente Paciente = new Paciente()
                 {
-                    codigo= Convert.ToInt32(txtCodigo.Text),
+                    codigo = Convert.ToInt32(txtCodigo.Text),
                     apellido = txtApellido.Text,
                     nombre = txtNombre.Text,
                     edad = Convert.ToInt32(txtEdad.Text)

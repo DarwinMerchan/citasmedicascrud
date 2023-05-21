@@ -25,9 +25,9 @@ namespace citasmedicascrud
         {
             try
             {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("http://192.168.3.8/citas/post.php");
+                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Constantes.Constantes.Host + "/citas/insertar.php");
                 Request.Method = "POST";
-                Request.ContentType = "application/json";
+                Request.ContentType = Constantes.Constantes.ContentType;
 
                 StreamWriter sw= new StreamWriter(Request.GetRequestStream());
                 Paciente Paciente = new Paciente() {
